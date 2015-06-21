@@ -8,7 +8,7 @@ m <<- NULL
 }
 get <- function() x
 cacheSolve <- function (...) {
-if(!is.null(m)) { ## this function checks if the cached data is available else it calculates inverse
+if(!is.null(m)) {                          ## this function checks if the cached data is available else it calculates inverse
 message("getting cached data")
 } else {
 m<<-solve(x,...)
@@ -16,4 +16,4 @@ m<<-solve(x,...)
 return(m)
 }
 list(set = set, get = get,
-cacheSolve = cacheSolve) ## the cacheSolve gives the inverse of the matrix.
+cacheSolve = cacheSolve)                                                   ## the cacheSolve gives the inverse of the matrix.
